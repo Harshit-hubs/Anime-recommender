@@ -7,7 +7,7 @@ from sklearn.neighbors import NearestNeighbors
 # Load dataset
 @st.cache_data
 def load_data():
-    df = pd.read_csv(r"D:\VS\.vscode\Python\animes0.csv")
+    df = pd.read_csv("animes0.csv")
     df['score'] = pd.to_numeric(df['score'], errors='coerce')
     df['score'] = df['score'].fillna(df['score'].mean())
 
